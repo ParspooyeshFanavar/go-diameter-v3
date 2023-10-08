@@ -5,8 +5,8 @@
 package smparser
 
 import (
-	"github.com/fiorix/go-diameter/diam"
-	"github.com/fiorix/go-diameter/diam/datatype"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam/datatype"
 )
 
 // CER is a Capabilities-Exchange-Request message.

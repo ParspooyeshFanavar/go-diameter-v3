@@ -10,7 +10,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/fiorix/go-diameter/diam/datatype"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam/datatype"
 )
 
 // parentAppIds map allows for hierarchical AVP search dependencies

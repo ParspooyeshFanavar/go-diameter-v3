@@ -9,9 +9,9 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/fiorix/go-diameter/diam/avp"
-	"github.com/fiorix/go-diameter/diam/datatype"
-	"github.com/fiorix/go-diameter/diam/dict"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam/avp"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam/datatype"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/v3/diam/dict"
 )
 
 var testAVP = [][]byte{ // Body of a CER message
@@ -55,9 +55,9 @@ var testAVP = [][]byte{ // Body of a CER message
 
 func TestNewAVP(t *testing.T) {
 	a := NewAVP(
-		avp.OriginHost, // Code
-		avp.Mbit,       // Flags
-		0,              // Vendor
+		avp.OriginHost,                      // Code
+		avp.Mbit,                            // Flags
+		0,                                   // Vendor
 		datatype.DiameterIdentity("foobar"), // Data
 	)
 	if a.Length != 14 { // Length in the AVP header

@@ -5,9 +5,11 @@
 Package protos is a generated protocol buffer package.
 
 It is generated from these files:
+
 	s6a.proto
 
 It has these top-level messages:
+
 	AuthenticationInformationRequest
 	AuthenticationInformationAnswer
 	UpdateLocationRequest
@@ -227,10 +229,12 @@ type AuthenticationInformationAnswer struct {
 	EutranVectors []*AuthenticationInformationAnswer_EUTRANVector `protobuf:"bytes,2,rep,name=eutran_vectors,json=eutranVectors" json:"eutran_vectors,omitempty"`
 }
 
-func (m *AuthenticationInformationAnswer) Reset()                    { *m = AuthenticationInformationAnswer{} }
-func (m *AuthenticationInformationAnswer) String() string            { return proto.CompactTextString(m) }
-func (*AuthenticationInformationAnswer) ProtoMessage()               {}
-func (*AuthenticationInformationAnswer) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{1} }
+func (m *AuthenticationInformationAnswer) Reset()         { *m = AuthenticationInformationAnswer{} }
+func (m *AuthenticationInformationAnswer) String() string { return proto.CompactTextString(m) }
+func (*AuthenticationInformationAnswer) ProtoMessage()    {}
+func (*AuthenticationInformationAnswer) Descriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{1}
+}
 
 func (m *AuthenticationInformationAnswer) GetErrorCode() ErrorCode {
 	if m != nil {
