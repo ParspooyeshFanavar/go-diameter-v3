@@ -1,5 +1,5 @@
-// +build go1.8
-// +build linux,!386
+//go:build go1.8 && linux && !386
+// +build go1.8,linux,!386
 
 // Copyright 2013-2015 go-diameter authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fiorix/go-diameter/diam"
-	"github.com/fiorix/go-diameter/diam/diamtest"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam/diamtest"
 )
 
 func TestCapabilitiesExchangeSCTP(t *testing.T) {

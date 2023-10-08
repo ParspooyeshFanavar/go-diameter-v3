@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fiorix/go-diameter/diam/avp"
-	"github.com/fiorix/go-diameter/diam/datatype"
-	"github.com/fiorix/go-diameter/diam/dict"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam/avp"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam/datatype"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam/dict"
 )
 
 // MessageBufferLength is the default buffer length for Diameter messages.
@@ -340,7 +340,6 @@ func avpsWithPath(avps []*AVP, path []uint32) []*AVP {
 //	avps, err := m.FindAVPs(264)
 //	avps, err := m.FindAVPs(avp.OriginHost)
 //	avps, err := m.FindAVPs("Origin-Host")
-//
 func (m *Message) FindAVPs(code interface{}, vendorID uint32) ([]*AVP, error) {
 	dictAVP, err := m.Dictionary().FindAVPWithVendor(m.Header.ApplicationID, code, vendorID)
 
@@ -359,7 +358,6 @@ func (m *Message) FindAVPs(code interface{}, vendorID uint32) ([]*AVP, error) {
 //	avp, err := m.FindAVP(264)
 //	avp, err := m.FindAVP(avp.OriginHost)
 //	avp, err := m.FindAVP("Origin-Host")
-//
 func (m *Message) FindAVP(code interface{}, vendorID uint32) (*AVP, error) {
 	dictAVP, err := m.Dictionary().FindAVPWithVendor(m.Header.ApplicationID, code, vendorID)
 
@@ -384,7 +382,6 @@ func (m *Message) FindAVP(code interface{}, vendorID uint32) (*AVP, error) {
 //	avp, err := m.FindAVPsWithPath([]interface{}{264})
 //	avp, err := m.FindAVPsWithPath([]interface{}{avp.OriginHost})
 //	avp, err := m.FindAVPsWithPath([]interface{}{"Origin-Host"})
-//
 func (m *Message) FindAVPsWithPath(path []interface{}, vendorID uint32) ([]*AVP, error) {
 	pathCodes := make([]uint32, len(path))
 	for i, pathCode := range path {

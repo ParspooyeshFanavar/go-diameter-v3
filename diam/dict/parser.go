@@ -14,7 +14,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/fiorix/go-diameter/diam/datatype"
+	"github.com/ParspooyeshFanavar/go-diameter-v3/diam/datatype"
 )
 
 const (
